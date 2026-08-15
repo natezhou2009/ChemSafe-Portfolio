@@ -5,20 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChemSafe AI | AI-Powered Lab Safety Expert</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0F172A',
+                        surface: '#020617',
+                        primary: '#3B82F6',   // Blue
+                        secondary: '#A855F7', // Purple
+                        accent: '#7CFC00',    // Lawn Green
+                        amber: '#FBBF24',
+                    }
+                }
+            }
+        }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
         h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; }
-        .bg-navy { background-color: #0F172A; }
-        .bg-surface { background-color: #020617; }
-        .text-cyan { color: #22D3EE; }
-        .bg-cyan { background-color: #22D3EE; }
-        .text-neon { color: #4ADE80; }
-        .bg-neon { background-color: #4ADE80; }
-        .text-amber { color: #FBBF24; }
-        .bg-amber { background-color: #FBBF24; }
         .text-gradient {
-            background: linear-gradient(to right, #22D3EE, #4ADE80);
+            background: linear-gradient(to right, #3B82F6, #A855F7, #7CFC00);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -30,22 +38,22 @@
     <nav class="fixed w-full z-50 bg-navy/90 backdrop-blur-md border-b border-gray-800">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-2">
-                <div class="w-8 h-8 bg-cyan rounded-lg flex items-center justify-center font-bold text-navy">C</div>
-                <span class="text-2xl font-bold tracking-tight text-white">ChemSafe <span class="text-cyan">AI</span></span>
+                <div class="w-8 h-8 bg-accent rounded-lg flex items-center justify-center font-bold text-navy">C</div>
+                <span class="text-2xl font-bold tracking-tight text-white">ChemSafe <span class="text-primary">AI</span></span>
             </div>
             <div class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#home" class="hover:text-cyan transition">Home</a>
-                <a href="#features" class="hover:text-cyan transition">Features</a>
-                <a href="#audience" class="hover:text-cyan transition">Audience</a>
-                <a href="#preview" class="hover:text-cyan transition">App Preview</a>
+                <a href="#home" class="hover:text-primary transition">Home</a>
+                <a href="#features" class="hover:text-secondary transition">Features</a>
+                <a href="#audience" class="hover:text-accent transition">Audience</a>
+                <a href="#preview" class="hover:text-primary transition">App Preview</a>
             </div>
-            <a href="#" class="bg-cyan hover:bg-cyan/90 text-navy px-6 py-2.5 rounded-full font-semibold transition text-sm">Download Now</a>
+            <a href="#" class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-full font-semibold transition text-sm">Download Now</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="relative pt-40 pb-20 px-6 overflow-hidden">
-        <div class="absolute top-0 right-0 -mr-40 -mt-40 w-96 h-96 bg-cyan/10 blur-[120px] rounded-full"></div>
+        <div class="absolute top-0 right-0 -mr-40 -mt-40 w-96 h-96 bg-primary/10 blur-[120px] rounded-full"></div>
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
             <div class="flex-1 text-center md:text-left">
                 <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
@@ -55,12 +63,12 @@
                     Access instant safety guidance, point your camera to detect lab hazards, and get real-time safety advice whenever you need it.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <button class="bg-cyan text-navy px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition transform shadow-lg shadow-cyan/20">Download on App Store</button>
-                    <button class="border border-cyan/40 text-cyan px-8 py-4 rounded-xl font-bold text-lg hover:bg-cyan/10 transition backdrop-blur-sm">Watch Demo Video</button>
+                    <button class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition transform shadow-lg shadow-primary/20">Download on App Store</button>
+                    <button class="border border-accent/40 text-accent px-8 py-4 rounded-xl font-bold text-lg hover:bg-accent/10 transition backdrop-blur-sm">Watch Demo Video</button>
                 </div>
             </div>
             <div class="flex-1 relative">
-                <div class="absolute inset-0 bg-cyan/20 blur-[100px] rounded-full"></div>
+                <div class="absolute inset-0 bg-secondary/20 blur-[100px] rounded-full"></div>
                 <!-- Smartphone mockup with camera overlay visual -->
                 <div class="relative z-10 w-full max-w-[320px] mx-auto">
                     <img src="Assets/Images/IMG_2440.jpeg" alt="ChemSafe AI Camera View" class="rounded-[2.5rem] shadow-2xl border-[8px] border-slate-800">
@@ -78,13 +86,13 @@
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Powerful Features for a Safer Lab</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-cyan to-neon mx-auto"></div>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary via-secondary to-accent mx-auto"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Feature 1 -->
-                <div class="bg-navy/50 p-10 rounded-3xl border border-gray-800 hover:border-cyan/50 transition group">
-                    <div class="w-14 h-14 bg-cyan/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-cyan transition">
-                        <svg class="w-7 h-7 text-cyan group-hover:text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path></svg>
+                <div class="bg-navy/50 p-10 rounded-3xl border border-gray-800 hover:border-primary/50 transition group">
+                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary transition">
+                        <svg class="w-7 h-7 text-primary group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path></svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-white">AI Hazard Scanning</h3>
                     <p class="text-gray-400 leading-relaxed">Instantly detects lab hazards, chemical labels, and GHS symbols using your device's camera.</p>
@@ -98,17 +106,17 @@
                     <p class="text-gray-400 leading-relaxed">Displays clear warnings for major hazards, including advice to seek immediate attention and quick access to emergency contact info.</p>
                 </div>
                 <!-- Feature 3 -->
-                <div class="bg-navy/50 p-10 rounded-3xl border border-gray-800 hover:border-neon/50 transition group">
-                    <div class="w-14 h-14 bg-neon/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-neon transition">
-                        <svg class="w-7 h-7 text-neon group-hover:text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <div class="bg-navy/50 p-10 rounded-3xl border border-gray-800 hover:border-secondary/50 transition group">
+                    <div class="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-secondary transition">
+                        <svg class="w-7 h-7 text-secondary group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-white">Lab Risk Assessment</h3>
                     <p class="text-gray-400 leading-relaxed">Provides clear risk ratings—Low, Moderate, High—and personalized feedback to help you plan safer lab setups.</p>
                 </div>
                 <!-- Feature 4 -->
-                <div class="bg-navy/50 p-10 rounded-3xl border border-gray-800 hover:border-blue-500/50 transition group">
-                    <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-500 transition">
-                        <svg class="w-7 h-7 text-blue-500 group-hover:text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                <div class="bg-navy/50 p-10 rounded-3xl border border-gray-800 hover:border-accent/50 transition group">
+                    <div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent transition">
+                        <svg class="w-7 h-7 text-accent group-hover:text-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
                     </div>
                     <h3 class="text-2xl font-bold mb-4 text-white">Post-Accident Guidance</h3>
                     <p class="text-gray-400 leading-relaxed">Gives actionable, step-by-step guidance on the Safety Page to handle uncertainties and avoid danger after witnessing an accident.</p>
@@ -124,16 +132,16 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Card 1 -->
                 <div class="bg-navy p-8 rounded-3xl border border-gray-800 text-center hover:-translate-y-2 transition duration-300">
-                    <div class="w-20 h-20 bg-neon/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-10 h-10 text-neon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
+                    <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"></path><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path></svg>
                     </div>
                     <h4 class="text-2xl font-bold mb-4 text-white">Students</h4>
                     <p class="text-gray-400">Easily learn safety symbols, identify equipment, and understand key safety protocols during your learning journey.</p>
                 </div>
                 <!-- Card 2 -->
                 <div class="bg-navy p-8 rounded-3xl border border-gray-800 text-center hover:-translate-y-2 transition duration-300">
-                    <div class="w-20 h-20 bg-cyan/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-10 h-10 text-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    <div class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
                     </div>
                     <h4 class="text-2xl font-bold mb-4 text-white">Educators & Beginners</h4>
                     <p class="text-gray-400">Use the app to double-check lab setups, guide students, and support teachers who lack extensive lab experience.</p>
@@ -156,8 +164,8 @@
             <h2 class="text-4xl font-bold text-center mb-16">Explore the Interface</h2>
             <div class="flex flex-col lg:flex-row gap-12 items-center">
                 <div class="w-full lg:w-1/2 space-y-4">
-                    <button onclick="changePreview(0)" class="preview-btn w-full text-left p-6 rounded-2xl bg-navy border-l-4 border-cyan transition active">
-                        <h5 class="font-bold text-cyan">Camera Hazard Scan</h5>
+                    <button onclick="changePreview(0)" class="preview-btn w-full text-left p-6 rounded-2xl bg-navy border-l-4 border-primary transition active">
+                        <h5 class="font-bold text-primary">Camera Hazard Scan</h5>
                         <p class="text-sm text-gray-400">Real-time identification of dangerous chemicals and glassware.</p>
                     </button>
                     <button onclick="changePreview(1)" class="preview-btn w-full text-left p-6 rounded-2xl hover:bg-navy/50 border-l-4 border-transparent transition">
@@ -175,7 +183,7 @@
                 </div>
                 <div class="w-full lg:w-1/2 flex justify-center">
                     <div class="bg-navy rounded-[3rem] p-4 shadow-2xl overflow-hidden border-8 border-slate-800 w-full max-w-[320px]">
-                        <img id="previewImage" src="Assets/Images/IMG_2442.jpeg" alt="App Preview" class="w-full rounded-[2rem] transition duration-500">
+                        <img id="previewImage" src="Assets/Images/Camera Hazard Scan.jpeg" alt="App Preview" class="w-full rounded-[2rem] transition duration-500">
                     </div>
                 </div>
             </div>
@@ -186,7 +194,7 @@
     <footer class="bg-navy pt-20 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-6">
             <!-- CTA Banner -->
-            <div class="bg-gradient-to-br from-cyan/90 to-neon/90 rounded-[2.5rem] p-12 text-center mb-20 text-navy backdrop-blur-md relative overflow-hidden">
+            <div class="bg-gradient-to-br from-primary via-secondary to-accent rounded-[2.5rem] p-12 text-center mb-20 text-white backdrop-blur-md relative overflow-hidden">
                 <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
                     <svg width="100%" height="100%"><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="1"/></pattern><rect width="100%" height="100%" fill="url(#grid)" /></svg>
                 </div>
@@ -196,7 +204,7 @@
                         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.1 2.48-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.31-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91 1.45.1 2.76.62 3.65 1.54-3.1 1.83-2.58 5.75.52 7.12-.66 1.69-1.5 3.39-2.38 5zm-5.06-15.01c.7-.85 1.17-2.03.95-3.21-1.02.04-2.25.68-2.98 1.54-.66.76-1.23 1.95-.98 3.1 1.13.09 2.29-.58 3.01-1.43z"/></svg>
                         <div class="text-left"><p class="text-[10px] uppercase opacity-70">Download on the</p><p class="text-lg font-bold leading-none">App Store</p></div>
                     </a>
-                    <a href="#" class="bg-white/10 backdrop-blur-md text-navy border border-navy/20 px-8 py-4 rounded-2xl flex items-center space-x-3 hover:scale-105 transition">
+                    <a href="#" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-2xl flex items-center space-x-3 hover:scale-105 transition">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
                         <div class="text-left"><p class="text-[10px] uppercase opacity-70">Available as</p><p class="text-lg font-bold leading-none">Web App</p></div>
                     </a>
@@ -205,14 +213,14 @@
 
             <div class="pb-12 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
                 <div class="flex items-center space-x-2 mb-6 md:mb-0">
-                    <div class="w-6 h-6 bg-cyan rounded flex items-center justify-center font-bold text-navy text-[10px]">C</div>
-                    <span class="text-lg font-bold tracking-tight text-white">ChemSafe AI</span>
+                    <div class="w-6 h-6 bg-accent rounded flex items-center justify-center font-bold text-navy text-[10px]">C</div>
+                    <span class="text-lg font-bold tracking-tight text-white">ChemSafe <span class="text-primary">AI</span></span>
                 </div>
                 <div class="flex space-x-8 mb-6 md:mb-0">
-                    <a href="#" class="hover:text-cyan transition">Privacy Policy</a>
-                    <a href="#" class="hover:text-cyan transition">Terms of Service</a>
-                    <a href="#" class="hover:text-cyan transition">Support</a>
-                    <a href="#" class="hover:text-cyan transition">Contact</a>
+                    <a href="#" class="hover:text-primary transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-secondary transition">Terms of Service</a>
+                    <a href="#" class="hover:text-accent transition">Support</a>
+                    <a href="#" class="hover:text-primary transition">Contact</a>
                 </div>
                 <p>&copy; 2024 ChemSafe AI. All rights reserved.</p>
             </div>
@@ -221,7 +229,7 @@
 
     <script>
         function changePreview(index) {
-            const images = ['Assets/Images/IMG_2442.jpeg', 'Assets/Images/IMG_2443.jpeg', 'Assets/Images/IMG_2444.jpeg', 'Assets/Images/IMG_2445.jpeg'];
+            const images = ['Assets/Images/Camera Hazard Scan.jpeg', 'Assets/Images/Risk Assessment Feedback.jpeg', 'Assets/Images/Emergency Warning Display.jpeg', 'Assets/Images/Safety Guide Page.jpeg'];
             const buttons = document.querySelectorAll('.preview-btn');
             const img = document.getElementById('previewImage');
 
@@ -236,14 +244,14 @@
 
             buttons.forEach((btn, i) => {
                 if (i === index) {
-                    btn.classList.add('bg-navy', 'border-cyan');
+                    btn.classList.add('bg-navy', 'border-primary');
                     btn.classList.remove('hover:bg-navy/50', 'border-transparent');
-                    btn.querySelector('h5').classList.add('text-cyan');
+                    btn.querySelector('h5').classList.add('text-primary');
                     btn.querySelector('h5').classList.remove('text-white');
                 } else {
-                    btn.classList.remove('bg-navy', 'border-cyan');
+                    btn.classList.remove('bg-navy', 'border-primary');
                     btn.classList.add('hover:bg-navy/50', 'border-transparent');
-                    btn.querySelector('h5').classList.remove('text-cyan');
+                    btn.querySelector('h5').classList.remove('text-primary');
                     btn.querySelector('h5').classList.add('text-white');
                 }
             });
